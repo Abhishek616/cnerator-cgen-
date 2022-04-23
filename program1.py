@@ -1,0 +1,10 @@
+import cgen as C
+hello = C.cgen('hello.c')
+hello.code.append(C.sysinclude('stdio.h'))
+hello.code.append(C.blank())
+hello.code.append(C.function('main', 'int',).add_param(C.variable('', '')))
+body = C.block(innerIndent=3)
+body.append(C.statement(C.fcall('printf').add_arg(r'"Hello World!\n"')))
+body.append(C.statement('return 0'))
+hello.code.append(body)
+print(str(hello))
