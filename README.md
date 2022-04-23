@@ -30,3 +30,7 @@ print(str(hello))
 ## Requires
 
 Python 3
+
+## Outputs
+
+Outputs of programs 1-5 are saved in samples 1-5
